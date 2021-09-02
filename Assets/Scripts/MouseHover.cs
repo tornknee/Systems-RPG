@@ -7,8 +7,10 @@ using UnityEngine.EventSystems;
 public class MouseHover : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     public Tooltip tooltip;
+    [SerializeField]
+    CustomisationSet customisation;
     
-    //finds which object it is over, and sets tooltipString to appropriate text
+    //Finds which object it is over, and sets tooltipString to appropriate text
     public void OnPointerEnter(PointerEventData eventData)
     {
         Debug.Log(eventData.pointerEnter.name);
@@ -25,6 +27,24 @@ public class MouseHover : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
                 break;
             case "Stubbornness":
                 tooltip.ShowTooltip("Stubbornness is how reluctant you are to fail. How much you refuse to take no for an answer, how easily you shrug off damage etc");
+                break;
+            case "Ability":
+                Debug.Log("hover");
+                switch(customisation.characterClass)
+                {
+                    case CharacterClass.greenWitch:
+                        tooltip.ShowTooltip("Roots entangle the enemy, stopping their movement");
+                        break;
+                    case CharacterClass.hedgeWitch:
+                        tooltip.ShowTooltip("A spirit appears to frighten the enemy, causing them to flee");
+                        break;
+                    case CharacterClass.cosmicWitch:
+                        tooltip.ShowTooltip("Reading the stars reveals enemy weakness, increasing critical hit chance");
+                        break;
+                    case CharacterClass.kitchenWitch:
+                        tooltip.ShowTooltip("Potion removes all enemy aggression");
+                        break;
+                }
                 break;
         }
     }
