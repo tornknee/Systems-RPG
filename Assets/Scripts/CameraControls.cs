@@ -28,11 +28,14 @@ public class CameraControls : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Rotate(Vector3.up * Input.GetAxis("Mouse X") * mouseSensitivity);
+        if (!DialogueLoader.dialogueLoader.inConversation)
+        {
+            transform.Rotate(Vector3.up * Input.GetAxis("Mouse X") * mouseSensitivity);
 
-        rotX += Input.GetAxisRaw("Mouse Y") * mouseSensitivity;
-        rotX = Mathf.Clamp(rotX, maxHeight, minHeight);
+            rotX += Input.GetAxisRaw("Mouse Y") * mouseSensitivity;
+            rotX = Mathf.Clamp(rotX, maxHeight, minHeight);
 
-        camRig.transform.localEulerAngles = Vector3.left * rotX;
+            camRig.transform.localEulerAngles = Vector3.left * rotX;
+        }
     }
 }
