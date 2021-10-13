@@ -28,7 +28,7 @@ public class CameraControls : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!DialogueLoader.dialogueLoader.inConversation)
+        if (!GameManager.gameM.paused)
         {
             transform.Rotate(Vector3.up * Input.GetAxis("Mouse X") * mouseSensitivity);
 

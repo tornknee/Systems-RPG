@@ -4,7 +4,6 @@ using UnityEngine;
 
 [RequireComponent(typeof(CharacterController))]
 
-
 //Governs movement, jump, dash and Animator
 public class PlayerMovement : MonoBehaviour
 {
@@ -45,7 +44,8 @@ public class PlayerMovement : MonoBehaviour
     //Checks for dash input and increases movement speed for brief time
     void Update()
     {
-        if (!DialogueLoader.dialogueLoader.inConversation)
+        //Disables movement if in conversation
+        if (!GameManager.gameM.paused)
         {
             movement.x = 0;
             movement.z = 0;
@@ -110,9 +110,9 @@ public class PlayerMovement : MonoBehaviour
             }
         }
         
+        //On E press, attempts to interact with any object 2m directly in front
         if(Input.GetKeyDown(KeyCode.E))
-        {
-            Debug.Log("interact");
+        {            
             RaycastHit hitObj;
             if (Physics.Raycast(transform.position, transform.forward,out hitObj, 2f))
             {
