@@ -1,6 +1,6 @@
 Using pre-set license
 Built from '2020.2/release' branch; Version is '2020.2.2f1 (068178b99f32) revision 426360'; Using compiler version '192528614'; Build Type 'Release'
-OS: 'Windows 10 Pro; OS build 19042.1237; Version 2009; 64bit' Language: 'en' Physical Memory: 8073 MB
+OS: 'Windows 10 Pro; OS build 19042.1288; Version 2009; 64bit' Language: 'en' Physical Memory: 8073 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
 
  COMMAND LINE ARGUMENTS:
@@ -15,11 +15,11 @@ C:/Users/User/Documents/GitHub/Systems-RPG
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-53047
+57158
 Successfully changed project path to: C:/Users/User/Documents/GitHub/Systems-RPG
 C:/Users/User/Documents/GitHub/Systems-RPG
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 38.07 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 46.25 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.2.2f1 (068178b99f32)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.2.2f1/Editor/Data/Resources/UnitySubsystems
@@ -35,48 +35,177 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.2.2f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.2.2f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.2.2f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56084
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56648
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.2.2f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.001432 seconds.
+Registered in 0.001517 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 39.36 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 48.36 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.414 seconds
+- Completed reload, in  2.494 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.000836 seconds.
+Registered in 0.002427 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.31 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.44 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.148 seconds
+- Completed reload, in  1.342 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
-Refreshing native plugins compatible for Editor in 0.33 ms, found 0 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.08 seconds
+Refreshing native plugins compatible for Editor in 0.32 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1240 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 89.4 MB.
-System memory in use after: 89.4 MB.
+Unloading 1247 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 90.0 MB.
+System memory in use after: 90.1 MB.
 
-Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 1708.
-Total: 2.064100 ms (FindLiveObjects: 0.163300 ms CreateObjectMapping: 0.050800 ms MarkObjects: 1.748600 ms  DeleteObjects: 0.100000 ms)
+Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 1715.
+Total: 2.796300 ms (FindLiveObjects: 0.266200 ms CreateObjectMapping: 0.049400 ms MarkObjects: 2.349800 ms  DeleteObjects: 0.128500 ms)
 
 ========================================================================
 Received Import Request.
-  path: Assets/Dialogue/QuestPrompt.cs
-  artifactKey: Guid(bcb525663ef2bdf48b04581b8a34797d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Dialogue/QuestPrompt.cs using Guid(bcb525663ef2bdf48b04581b8a34797d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8ea7a12e76b97c7171b97efe479bfae0') in 0.028634 seconds
-  Import took 0.031109 seconds .
+  path: Assets/Resources/Terrain/#NVJOB Water Shaders V2/Examples Water/Materials/Textures/Cubemap.cubemap
+  artifactKey: Guid(f625b0e7682e4deaa90d46f6dbcd68a6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Terrain/#NVJOB Water Shaders V2/Examples Water/Materials/Textures/Cubemap.cubemap using Guid(f625b0e7682e4deaa90d46f6dbcd68a6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4166c1ec6371e1c23d260bb4e1107a42') in 0.146214 seconds
+  Import took 0.150188 seconds .
 
+========================================================================
+Received Import Request.
+  Time since last request: 0.006499 seconds.
+  path: Assets/Resources/Terrain/#NVJOB Water Shaders V2/Examples Water/Materials/Textures/Cubemap.cubemap
+  artifactKey: Guid(f625b0e7682e4deaa90d46f6dbcd68a6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Terrain/#NVJOB Water Shaders V2/Examples Water/Materials/Textures/Cubemap.cubemap using Guid(f625b0e7682e4deaa90d46f6dbcd68a6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4166c1ec6371e1c23d260bb4e1107a42') in 0.026348 seconds
+  Import took 0.031818 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.297886 seconds.
+  path: Assets/Resources/Terrain
+  artifactKey: Guid(dc58c92410d9058469bc18148cfe4e48) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Terrain using Guid(dc58c92410d9058469bc18148cfe4e48) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f48a44bec8187cff51df9f9de7fbcabf') in 0.011969 seconds
+  Import took 0.020795 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.244564 seconds.
+  path: Assets/Resources/Terrain/#NVJOB Water Shaders V2
+  artifactKey: Guid(938d79963aaaf5547a77c546ca285738) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Terrain/#NVJOB Water Shaders V2 using Guid(938d79963aaaf5547a77c546ca285738) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '13b6eaf73e4731c2377b445aa9413927') in 0.021094 seconds
+  Import took 0.027012 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.016619 seconds.
+  path: Assets/Resources/Terrain/#NVJOB Water Shaders V2
+  artifactKey: Guid(938d79963aaaf5547a77c546ca285738) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Terrain/#NVJOB Water Shaders V2 using Guid(938d79963aaaf5547a77c546ca285738) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '13b6eaf73e4731c2377b445aa9413927') in 0.004843 seconds
+  Import took 0.010369 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.132661 seconds.
+  path: Assets/Resources/Terrain/#NVJOB Water Shaders V2/NewBrush.brush
+  artifactKey: Guid(f474d638d93bc014ba1d252c4d9cd8e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Terrain/#NVJOB Water Shaders V2/NewBrush.brush using Guid(f474d638d93bc014ba1d252c4d9cd8e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b448a360b82bb59e0db05166b1e62884') in 0.063780 seconds
+  Import took 0.067852 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001068 seconds.
+  path: Assets/Resources/Terrain/#NVJOB Water Shaders V2/NewLayer 1.terrainlayer
+  artifactKey: Guid(cee8a07c770d10d4fb67f8a6dcb07191) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Terrain/#NVJOB Water Shaders V2/NewLayer 1.terrainlayer using Guid(cee8a07c770d10d4fb67f8a6dcb07191) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '35898014d1d9f31a02b3c90b9712f038') in 0.088965 seconds
+  Import took 0.093246 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001063 seconds.
+  path: Assets/Resources/Terrain/#NVJOB Water Shaders V2/NewLayer.terrainlayer
+  artifactKey: Guid(3f87b0dd2e13ce843b3cc574643d9a00) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Terrain/#NVJOB Water Shaders V2/NewLayer.terrainlayer using Guid(3f87b0dd2e13ce843b3cc574643d9a00) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '13e0daa3d3a68e8dc72567a97730826a') in 0.085687 seconds
+  Import took 0.089405 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.071068 seconds.
+  path: Assets/Resources/Terrain/#NVJOB Water Shaders V2/Examples Water
+  artifactKey: Guid(4d66bb35da4b4f5780bce9b06aed6027) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Terrain/#NVJOB Water Shaders V2/Examples Water using Guid(4d66bb35da4b4f5780bce9b06aed6027) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cff8ea7c0e55b1b496014340a0198a63') in 0.019801 seconds
+  Import took 0.027590 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.016782 seconds.
+  path: Assets/Resources/Terrain/#NVJOB Water Shaders V2/Examples Water
+  artifactKey: Guid(4d66bb35da4b4f5780bce9b06aed6027) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Terrain/#NVJOB Water Shaders V2/Examples Water using Guid(4d66bb35da4b4f5780bce9b06aed6027) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cff8ea7c0e55b1b496014340a0198a63') in 0.004891 seconds
+  Import took 0.010474 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.093979 seconds.
+  path: Assets/Resources/Terrain/#NVJOB Water Shaders V2/Examples Water/Prefabs
+  artifactKey: Guid(a6a9676dab84481793066ac06b79d651) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Terrain/#NVJOB Water Shaders V2/Examples Water/Prefabs using Guid(a6a9676dab84481793066ac06b79d651) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '765f8bcbdde167687d38089731c9a396') in 0.028071 seconds
+  Import took 0.035603 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.012167 seconds.
+  path: Assets/Resources/Terrain/#NVJOB Water Shaders V2/Examples Water/Prefabs
+  artifactKey: Guid(a6a9676dab84481793066ac06b79d651) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Terrain/#NVJOB Water Shaders V2/Examples Water/Prefabs using Guid(a6a9676dab84481793066ac06b79d651) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '765f8bcbdde167687d38089731c9a396') in 0.005602 seconds
+  Import took 0.009916 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.110039 seconds.
+  path: Assets/Resources/Terrain/#NVJOB Water Shaders V2/Examples Water/Prefabs/Water Specular Mirror.prefab
+  artifactKey: Guid(be3a74ee4c9d4d899462b72a41f62728) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Terrain/#NVJOB Water Shaders V2/Examples Water/Prefabs/Water Specular Mirror.prefab using Guid(be3a74ee4c9d4d899462b72a41f62728) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8a2784803718b04bcea1f94b5f6123d0') in 0.157903 seconds
+  Import took 0.163221 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000467 seconds.
+  path: Assets/Resources/Terrain/#NVJOB Water Shaders V2/Examples Water/Prefabs/Water Surface.prefab
+  artifactKey: Guid(8a8ade231d4e4115a527f463ebb01a8b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Terrain/#NVJOB Water Shaders V2/Examples Water/Prefabs/Water Surface.prefab using Guid(8a8ade231d4e4115a527f463ebb01a8b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c52b90a46675ee5ae72049a449218ce5') in 0.047868 seconds
+  Import took 0.054955 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000519 seconds.
+  path: Assets/Resources/Terrain/#NVJOB Water Shaders V2/Examples Water/Prefabs/Water Surface Mirror.prefab
+  artifactKey: Guid(28ab203a6204400b853fcf56294ef10b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Terrain/#NVJOB Water Shaders V2/Examples Water/Prefabs/Water Surface Mirror.prefab using Guid(28ab203a6204400b853fcf56294ef10b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5e703061770ef0f1da09c30755ab7e3a') in 0.103940 seconds
+  Import took 0.109002 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000373 seconds.
+  path: Assets/Resources/Terrain/#NVJOB Water Shaders V2/Examples Water/Prefabs/Water Specular.prefab
+  artifactKey: Guid(a3b85ee7155343c0a5077c56fdbddf1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Terrain/#NVJOB Water Shaders V2/Examples Water/Prefabs/Water Specular.prefab using Guid(a3b85ee7155343c0a5077c56fdbddf1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '07c69991640d693b2bb3752c1afb9503') in 0.105202 seconds
+  Import took 0.110885 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001932 seconds.
+  path: Assets/Resources/Terrain/#NVJOB Water Shaders V2/Examples Water/Prefabs/Water Specular.prefab
+  artifactKey: Guid(a3b85ee7155343c0a5077c56fdbddf1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Terrain/#NVJOB Water Shaders V2/Examples Water/Prefabs/Water Specular.prefab using Guid(a3b85ee7155343c0a5077c56fdbddf1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '07c69991640d693b2bb3752c1afb9503') in 0.071476 seconds
+  Import took 0.081749 seconds .
+
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file

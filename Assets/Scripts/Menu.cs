@@ -6,8 +6,12 @@ using UnityEngine.UI;
 public class Menu : MonoBehaviour
 {
     public static Menu menu;
+
+    public GameObject questLogPanel;
     public Transform questLogArea;
     public Text questLogText;
+
+    public GameObject invPanel;
     Text currentText;
 
     private void Awake()
@@ -36,6 +40,36 @@ public class Menu : MonoBehaviour
         foreach(Transform item in questLogArea.transform)
         {
             Destroy(item.gameObject);
+        }
+    }
+    public void ShowQuestLog()
+    {
+        if (invPanel.activeSelf)
+        {
+            invPanel.SetActive(false);
+        }
+        if (!questLogPanel.activeSelf)
+        {
+            questLogPanel.SetActive(true);
+        }
+        else
+        {
+            questLogPanel.SetActive(false);
+        }
+    }
+    public void ShowInv()
+    {
+        if(questLogPanel.activeSelf)
+        {
+            questLogPanel.SetActive(false);
+        }
+        if (!invPanel.activeSelf)
+        {
+            invPanel.SetActive(true);
+        }
+        else
+        {
+            invPanel.SetActive(false);
         }
     }
 }
