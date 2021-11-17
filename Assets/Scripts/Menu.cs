@@ -66,6 +66,11 @@ public class Menu : MonoBehaviour
         if (!invPanel.activeSelf)
         {
             invPanel.SetActive(true);
+            foreach (ItemData item in InventoryManager.invMan.items)
+            {
+                InventoryManager.invMan.invButtons = GetComponentsInChildren<ClickableObject>();
+                InventoryManager.invMan.UpdateSlot(item.invSlot);
+            }
         }
         else
         {

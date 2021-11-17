@@ -113,5 +113,7 @@ MonoBehaviour:
     stackable: 1
     count: 1
     icon: {fileID: 21300000, guid: a245348561d671c46b1eb11c12f8ab7f, type: 3}
-    droppedObj: {fileID: 0}
-    slot: 0
+    invSlot: 0
+    value: 10
+  stat: 1
+  increaseAmount: 10

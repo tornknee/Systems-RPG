@@ -17,7 +17,7 @@ public abstract class PickUpItem : MonoBehaviour
             if(slot >= 0)
             {
                 InventoryManager.invMan.items[slot].count += data.count;
-                InventoryManager.invMan.UpdateSlot(slot);
+                //InventoryManager.invMan.UpdateSlot(slot);
                 Debug.Log("An item has been added to a stack");
                 Destroy(gameObject);
                 return;
@@ -32,7 +32,9 @@ public abstract class PickUpItem : MonoBehaviour
         if (slot >=0)
         {
             InventoryManager.invMan.items[slot] = data;
-            InventoryManager.invMan.UpdateSlot(slot);
+            InventoryManager.invMan.items[slot].invSlot = slot;
+            InventoryManager.invMan.pickUps[slot] = this;
+            //InventoryManager.invMan.UpdateSlot(slot);
             Debug.Log("an item has been picked up into a new slot");
             Destroy(gameObject);
         }
@@ -42,5 +44,8 @@ public abstract class PickUpItem : MonoBehaviour
         }
     }
 
-
+    public virtual void Use()
+    {
+        Debug.Log(data.itemName + " used");
+    }
 }

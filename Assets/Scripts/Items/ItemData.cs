@@ -9,20 +9,15 @@ public class ItemData
     public bool stackable;
     public int count;
     public Sprite icon;
-    public int slot;
-    /*/ add later potentially
+    public int invSlot;
+    
     public int value;
-    public float weight;
-    /*/
-    public void Use()
-    {
-        Debug.Log("used " + itemName);
-    }
+
     public void Drop()
     {
         GameObject toDrop = Resources.Load("Prefabs/" + itemName) as GameObject;
         GameObject.Instantiate(toDrop);
-        InventoryManager.invMan.ClearSlot(slot);
+        InventoryManager.invMan.ClearSlot(invSlot);
         Debug.Log("dropped" + itemName);
     }
 }

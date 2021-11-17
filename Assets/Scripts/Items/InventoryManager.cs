@@ -5,14 +5,14 @@ using UnityEngine.UI;
 
 public class InventoryManager : MonoBehaviour
 {
-    public ItemData[] items = new ItemData[10];
+    public ItemData[] items = new ItemData[12];
+    public PickUpItem[] pickUps = new PickUpItem[12];   
     public ClickableObject[] invButtons;
     public static InventoryManager invMan;
 
     // Start is called before the first frame update
     void Start()
-    {
-        
+    {        
         if (invMan == null)
         {
             invMan = this;
@@ -21,7 +21,7 @@ public class InventoryManager : MonoBehaviour
         {
             Destroy(this);
         }
-        invButtons = GetComponentsInChildren<ClickableObject>();
+        //invButtons = GetComponentsInChildren<ClickableObject>();
     }
 
     public int FindAvailableStackSlot(PickUpItem item)
@@ -39,9 +39,9 @@ public class InventoryManager : MonoBehaviour
 
     public int FindEmptySlot(PickUpItem item)
     {
-        for(int i = 0; i<InventoryManager.invMan.items.Length;i++)
+        for(int i = 0; i<invMan.items.Length;i++)
         {
-            if(InventoryManager.invMan.items[i].itemName == "" || InventoryManager.invMan.items[i].itemName == null )
+            if(invMan.items[i].itemName == "" || invMan.items[i].itemName == null )
             {
                 return (i);
             }
@@ -51,26 +51,24 @@ public class InventoryManager : MonoBehaviour
 
     public void UpdateSlot(int index)
     {
+        // items[index].invSlot = index;
         //update icon
         invButtons[index].GetComponent<Image>().sprite = items[index].icon;
         invButtons[index].GetComponent<Image>().color = Color.white;
 
+         //update text
+         if (items[index].stackable)
+         {
+             invButtons[index].GetComponentInChildren<Text>().text = items[index].count + "";
+         }
+         else
+         {
+             invButtons[index].GetComponentInChildren<Text>().text = "";
+         }
 
-        //update text
-        if (items[index].stackable)
-        { 
-            invButtons[index].GetComponentInChildren<Text>().text = items[index].count + ""; 
-        }
-        else
-        {
-            invButtons[index].GetComponentInChildren<Text>().text = "";
-        }
-
-        //update function
-        invButtons[index].GetComponent<ClickableObject>().leftClick = items[index].Use;
-        invButtons[index].GetComponent<ClickableObject>().rightClick = items[index].Drop;
-
-        items[index].slot = index;
+        //update function        
+        invButtons[index].GetComponent<ClickableObject>().leftClick = pickUps[index].Use;
+        invButtons[index].GetComponent<ClickableObject>().rightClick = items[index].Drop;      
     }
     public void ClearSlot(int index)
     {

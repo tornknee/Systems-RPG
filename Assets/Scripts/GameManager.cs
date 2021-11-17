@@ -38,9 +38,9 @@ public class GameManager : MonoBehaviour
                 GameManager.gameM.paused = true;
             }
             else
-            {
-                
+            {              
                 menu.SetActive(false);
+                Menu.menu.invPanel.SetActive(false);
                 Menu.menu.EmptyQuestLog();
                 GameManager.gameM.paused = false;
             }
