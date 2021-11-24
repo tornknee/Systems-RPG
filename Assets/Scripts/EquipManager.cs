@@ -10,6 +10,9 @@ public class EquipManager : MonoBehaviour
     int invSlot;
     public Image defaultSprite;
 
+
+    //I've come to realise that this whole class is kinda unneccessary, as the equipment could have just had it's own inventory manager 
+    //And then it largely just would have used functions I already had, but I built it and it works and I don't have time to scrap it and start over.
     private void Start()
     {
 
@@ -43,6 +46,7 @@ public class EquipManager : MonoBehaviour
     public void Unequip(ItemData item)
     {
         equipButtons[item.invSlot].item = new ItemData();
+  
         //update icon
         equipButtons[item.invSlot].GetComponent<Image>().sprite = defaultSprite.sprite;
         equipButtons[item.invSlot].GetComponent<Image>().color = defaultSprite.color;
@@ -59,6 +63,7 @@ public class EquipManager : MonoBehaviour
         if (slot >= 0)
         {
             Menu.menu.playerInv.pickUps[slot] = equippedItems[item.invSlot];
+            equip.equippedItems[item.invSlot] = null;
             Menu.menu.playerInv.items[slot] = item;
             Menu.menu.playerInv.items[slot].invSlot = slot;
             Debug.Log("an item has been picked up into a new slot");
@@ -68,5 +73,6 @@ public class EquipManager : MonoBehaviour
         {
             Debug.Log("No valid slot was found");
         }
+
     }
 }

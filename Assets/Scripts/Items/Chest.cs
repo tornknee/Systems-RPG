@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Chest : MonoBehaviour
 {
-    public GameObject chestUI;
+   
     public GameObject myInvPanel;
     public GameObject chestInvPanel;
     public InventoryManager chest;
@@ -20,7 +20,9 @@ public class Chest : MonoBehaviour
     /// </summary>
     public void Interact()
     {
-        chestUI.SetActive(true);
+        Trade.trade.StartTrade(this);
+        ConsumablesBar.consumables.consumablesUI.SetActive(false);
+        Menu.menu.chestUI.SetActive(true);
         GameManager.gameM.paused = true;
 
         for (int i = 0; i < chest.pickUps.Length; i++)
@@ -46,12 +48,17 @@ public class Chest : MonoBehaviour
         }
         Trade.trade.StartTrade(this);
     }
+
+    /// <summary>
+    /// Just closes chest panel
+    /// </summary>
     private void Update()
     {
         if(Input.GetKeyDown(KeyCode.Escape))
         {
-            chestUI.SetActive(false);
+            Menu.menu.chestUI.SetActive(false);
             GameManager.gameM.paused = false;
+            ConsumablesBar.consumables.consumablesUI.SetActive(true);
         }
     }
 }

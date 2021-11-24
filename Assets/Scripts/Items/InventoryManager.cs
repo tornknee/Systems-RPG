@@ -91,6 +91,7 @@ public class InventoryManager : MonoBehaviour
         //update function
         invButtons[index].GetComponent<ClickableObject>().leftClick = null;
         invButtons[index].GetComponent<ClickableObject>().rightClick = null;
+        invButtons[index].GetComponent<ClickableObject>().middleClick = null;
     }
 
 

@@ -7,6 +7,7 @@ public class ConsumablesBar : MonoBehaviour
     public InventoryManager consumablesInv;
     public static ConsumablesBar consumables;
     public float timer;
+    public GameObject consumablesUI;
     void Start()
     {
         consumables = this;

@@ -9,6 +9,10 @@ public class Equipment : PickUpItem
         base.Use();
     }
 
+    /// <summary>
+    /// Equips to appropriate slot, so you don't end up wearing a sword as a hat.
+    /// </summary>
+    /// <param name="item"></param>
     public override void Move(ItemData item)
     {
         if (Menu.menu.invPanel.activeSelf)
@@ -44,7 +48,7 @@ public class Equipment : PickUpItem
             EquipManager.equip.equipButtons[index].item.invSlot = index;
             EquipManager.equip.equippedItems[index] = this;
         }
-        else
+        else if (Menu.menu.chestUI.activeSelf)
         {
             Trade.trade.Move(item);
         }

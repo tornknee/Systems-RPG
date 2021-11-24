@@ -12,6 +12,10 @@ public class Consumable : PickUpItem
     public float increaseAmount;
 
 
+    /// <summary>
+    /// Adds increaseAmount to relevant stat, i.e. health/mana
+    /// Controls cooldown of consumables
+    /// </summary>
     public override void Use()
     {
         int slot = data.invSlot;
@@ -37,15 +41,17 @@ public class Consumable : PickUpItem
             data.inv.ClearSlot(slot);
         }       
     }
+
     public override void Move(ItemData item)
     {
         if (Menu.menu.invPanel.activeSelf)
         {
-            Trade.trade.AddConsumable();
-            Trade.trade.Move(this.data);
+            Trade.trade.AddConsumable(item);
+            //Trade.trade.Move(this.data);
         }
-        else
-        { 
+        else if (Menu.menu.chestUI.activeSelf)
+        {
+                      
             Trade.trade.Move(item); 
         }
     }

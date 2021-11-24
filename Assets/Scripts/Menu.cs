@@ -6,12 +6,13 @@ using UnityEngine.UI;
 public class Menu : MonoBehaviour
 {
     public static Menu menu;
-
+    public GameObject chestUI;
     public GameObject questLogPanel;
     public Transform questLogArea;
     public Text questLogText;
 
     public GameObject invPanel;
+    public GameObject invGrid;
 
     Text currentText;
 
@@ -69,9 +70,10 @@ public class Menu : MonoBehaviour
         if (!invPanel.activeSelf)
         {
             invPanel.SetActive(true);
+           
             foreach (ItemData item in playerInv.items)
             {
-                playerInv.invButtons = GetComponentsInChildren<ClickableObject>();
+                playerInv.invButtons = invGrid.GetComponentsInChildren<ClickableObject>();
                 playerInv.UpdateSlot(item.invSlot);
             }
         }
