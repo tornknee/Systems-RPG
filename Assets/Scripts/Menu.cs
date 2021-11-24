@@ -12,7 +12,10 @@ public class Menu : MonoBehaviour
     public Text questLogText;
 
     public GameObject invPanel;
+
     Text currentText;
+
+    public InventoryManager playerInv;
 
     private void Awake()
     {
@@ -66,10 +69,10 @@ public class Menu : MonoBehaviour
         if (!invPanel.activeSelf)
         {
             invPanel.SetActive(true);
-            foreach (ItemData item in InventoryManager.invMan.items)
+            foreach (ItemData item in playerInv.items)
             {
-                InventoryManager.invMan.invButtons = GetComponentsInChildren<ClickableObject>();
-                InventoryManager.invMan.UpdateSlot(item.invSlot);
+                playerInv.invButtons = GetComponentsInChildren<ClickableObject>();
+                playerInv.UpdateSlot(item.invSlot);
             }
         }
         else
@@ -77,4 +80,6 @@ public class Menu : MonoBehaviour
             invPanel.SetActive(false);
         }
     }
+
+    
 }

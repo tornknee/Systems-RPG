@@ -4,7 +4,7 @@ using UnityEngine;
 
 [System.Serializable]
 public class ItemData
-{
+{   
     public string itemName;
     public bool stackable;
     public int count;
@@ -12,12 +12,12 @@ public class ItemData
     public int invSlot;
     
     public int value;
+    public InventoryManager inv;
 
-    public void Drop()
+    public enum EquipSlot
     {
-        GameObject toDrop = Resources.Load("Prefabs/" + itemName) as GameObject;
-        GameObject.Instantiate(toDrop);
-        InventoryManager.invMan.ClearSlot(invSlot);
-        Debug.Log("dropped" + itemName);
+        hat, leftHand, rightHand, robe, boots
     }
+    public EquipSlot equipSlot;
+    public bool equipped;
 }

@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -8,27 +6,28 @@ public class InventoryManager : MonoBehaviour
     public ItemData[] items = new ItemData[12];
     public PickUpItem[] pickUps = new PickUpItem[12];   
     public ClickableObject[] invButtons;
-    public static InventoryManager invMan;
+    //public static InventoryManager invMan;
+    public Image defaultSprite;
 
-    // Start is called before the first frame update
     void Start()
-    {        
-        if (invMan == null)
+    {
+
+        /*/if (invMan == null)
         {
             invMan = this;
         }
         else
         {
             Destroy(this);
-        }
+        }/*/
         //invButtons = GetComponentsInChildren<ClickableObject>();
     }
 
-    public int FindAvailableStackSlot(PickUpItem item)
+    public int FindAvailableStackSlot(PickUpItem pickup)
     {
         for(int i = 0; i<items.Length; i++)
         {
-            if(item.data.itemName == items[i].itemName && items[i].count <= 10 - item.data.count)
+            if(pickup.data.itemName == items[i].itemName && items[i].count <= 10 - pickup.data.count)
             {
                 Debug.Log("available slot found");
                 return (i);
@@ -37,11 +36,11 @@ public class InventoryManager : MonoBehaviour
         return -1;
     }
 
-    public int FindEmptySlot(PickUpItem item)
+    public int FindEmptySlot()
     {
-        for(int i = 0; i<invMan.items.Length;i++)
+        for(int i = 0; i<items.Length;i++)
         {
-            if(invMan.items[i].itemName == "" || invMan.items[i].itemName == null )
+            if(items[i].itemName == "" || items[i].itemName == null )
             {
                 return (i);
             }
@@ -51,7 +50,8 @@ public class InventoryManager : MonoBehaviour
 
     public void UpdateSlot(int index)
     {
-        // items[index].invSlot = index;
+        items[index].inv = this;
+        //items[index].invSlot = index;
         //update icon
         invButtons[index].GetComponent<Image>().sprite = items[index].icon;
         invButtons[index].GetComponent<Image>().color = Color.white;
@@ -66,17 +66,24 @@ public class InventoryManager : MonoBehaviour
              invButtons[index].GetComponentInChildren<Text>().text = "";
          }
 
-        //update function        
+        //update function     
+
         invButtons[index].GetComponent<ClickableObject>().leftClick = pickUps[index].Use;
-        invButtons[index].GetComponent<ClickableObject>().rightClick = items[index].Drop;      
+        invButtons[index].GetComponent<ClickableObject>().rightClick = pickUps[index].Drop;
+               
+        invButtons[index].GetComponent<ClickableObject>().item = items[index];
+        invButtons[index].GetComponent<ClickableObject>().middleClick = pickUps[index].Move;
+
     }
     public void ClearSlot(int index)
     {
         items[index] = new ItemData();
+        invButtons[index].item = new ItemData();
+        pickUps[index] = null;
 
         //update icon
-        invButtons[index].GetComponent<Image>().sprite = null;
-        invButtons[index].GetComponent<Image>().color = Color.white;
+        invButtons[index].GetComponent<Image>().sprite = defaultSprite.sprite;
+        invButtons[index].GetComponent<Image>().color = defaultSprite.color;
 
         //update text
         invButtons[index].GetComponentInChildren<Text>().text =  "";
@@ -84,5 +91,11 @@ public class InventoryManager : MonoBehaviour
         //update function
         invButtons[index].GetComponent<ClickableObject>().leftClick = null;
         invButtons[index].GetComponent<ClickableObject>().rightClick = null;
+    }
+
+
+    public void Move(ItemData item)
+    {
+        Debug.Log("moving" + item.itemName);
     }
 }

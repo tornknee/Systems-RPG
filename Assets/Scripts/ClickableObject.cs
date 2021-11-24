@@ -8,8 +8,10 @@ public class ClickableObject : MonoBehaviour, IPointerClickHandler
     public LeftClick leftClick;
     public delegate void RightClick();
     public RightClick rightClick;
-    public delegate void MiddleClick();
+
+    public delegate void MiddleClick(ItemData item);
     public MiddleClick middleClick;
+    public ItemData item;
     public void OnPointerClick(PointerEventData eventData)
     {
         if (eventData.button == PointerEventData.InputButton.Left)
@@ -20,14 +22,16 @@ public class ClickableObject : MonoBehaviour, IPointerClickHandler
                 leftClick();
             }
         }
+
         else if (eventData.button == PointerEventData.InputButton.Middle)
         { 
             if(middleClick != null)
             {
                 Debug.Log("Middle click");
-                middleClick();
+                middleClick(item);
             }      
         }
+
         else if (eventData.button == PointerEventData.InputButton.Right)
         {
             if(rightClick != null)
